@@ -29,7 +29,7 @@ def get_tasks_delete_keyboard(tasks):
         short_text = t[1][:15] + "..." if len(t[1]) > 15 else t[1]
         display_time = t[2].split(' ')[1] 
         
-        button_text = f"⏰ {display_time} | {short_text} ❌"
+        button_text = f"{display_time} | {short_text}"
         
 
         builder.button(text=button_text, callback_data=f"del_{t[0]}")
